@@ -12,7 +12,6 @@ import Wrapper from "@/layouts/wrapper";
 import HeaderEleven from "@/layouts/headers/header-eleven";
 import FooterTwo from "@/layouts/footers/footer-two";
 import BlogDetailsRelatedPosts from "@/components/blog/details/blog-details-related-posts";
-// animation
 import { charAnimation } from "@/utils/title-animation";
 import BlogDetailsAreaTwo from "@/components/blog/details/blog-details-area-2";
 // image
@@ -27,6 +26,9 @@ const BlogDetailsTwoMain = () => {
     }, 100);
     return () => clearTimeout(timer);
   });
+
+  // this slug is just used to exclude the current post from "related"
+  const currentSlug = "blog-details-2";
 
   return (
     <Wrapper>
@@ -97,6 +99,7 @@ const BlogDetailsTwoMain = () => {
             {/* blog details area */}
 
             {/* related posts */}
+            <BlogDetailsRelatedPosts currentSlug={currentSlug} />
             {/* related posts */}
           </main>
 
