@@ -14,7 +14,8 @@ type BlogCard = {
 };
 
 type BlogDetailsRelatedPostsProps = {
-  currentSlug?: string; // make it optional to avoid TS errors when not passed
+  // 👇 make it OPTIONAL
+  currentSlug?: string;
 };
 
 export default function BlogDetailsRelatedPosts({
@@ -23,8 +24,7 @@ export default function BlogDetailsRelatedPosts({
   const [related, setRelated] = useState<BlogCard[]>([]);
 
   useEffect(() => {
-    // if we don't know the current slug, don't try to load related posts
-    if (!currentSlug) return;
+    if (!currentSlug) return; // don’t query if we don’t know current post
 
     const fetchRelated = async () => {
       const { data, error } = await supabase
@@ -42,7 +42,6 @@ export default function BlogDetailsRelatedPosts({
     fetchRelated();
   }, [currentSlug]);
 
-  // nothing to show
   if (!related.length) return null;
 
   return (
@@ -55,7 +54,6 @@ export default function BlogDetailsRelatedPosts({
             </div>
           </div>
         </div>
-
         <div className="row">
           {related.map((item) => {
             const adaptedItem = {

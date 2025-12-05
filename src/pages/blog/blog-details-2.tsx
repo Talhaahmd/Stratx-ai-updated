@@ -27,7 +27,7 @@ const BlogDetailsTwoMain = () => {
     return () => clearTimeout(timer);
   });
 
-  // this slug is just used to exclude the current post from "related"
+  // whatever you want to treat as the slug of this static page
   const currentSlug = "blog-details-2";
 
   return (
