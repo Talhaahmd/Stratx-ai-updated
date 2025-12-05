@@ -6,12 +6,14 @@ import { ScrollSmoother, ScrollTrigger, SplitText } from "@/plugins";
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
+// internal imports
 import Wrapper from "@/layouts/wrapper";
 import HeaderEleven from "@/layouts/headers/header-eleven";
 import FooterTwo from "@/layouts/footers/footer-two";
 import BlogDetailsArea from "@/components/blog/details/blog-details-area";
 import BlogDetailsBreadcrumb from "@/components/blog/details/blog-details-breadcrumb";
 import BlogDetailsRelatedPosts from "@/components/blog/details/blog-details-related-posts";
+// animation
 import { charAnimation } from "@/utils/title-animation";
 import { IdProps } from "@/types/custom-d-t";
 
@@ -25,23 +27,33 @@ const BlogDetailsMain = ({ id }: IdProps) => {
     return () => clearTimeout(timer);
   }, []);
 
-  const currentSlug = String(id); // works whether id is number or string
+  const currentSlug = String(id); // make sure it's a string
 
   return (
     <Wrapper>
+      {/* header area start */}
       <HeaderEleven transparent={true} />
+      {/* header area end */}
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
+            {/* blog details hero */}
             <BlogDetailsBreadcrumb id={id} />
-            <BlogDetailsArea id={id} />
+            {/* blog details hero */}
 
-            {/* related posts now receives required prop */}
+            {/* blog details area */}
+            <BlogDetailsArea id={id} />
+            {/* blog details area */}
+
+            {/* related posts – FIXED */}
             <BlogDetailsRelatedPosts currentSlug={currentSlug} />
+            {/* related posts */}
           </main>
 
+          {/* footer area */}
           <FooterTwo topCls="" />
+          {/* footer area */}
         </div>
       </div>
     </Wrapper>

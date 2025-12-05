@@ -13,14 +13,19 @@ type BlogCard = {
   created_at: string | null;
 };
 
+type BlogDetailsRelatedPostsProps = {
+  currentSlug?: string; // make it optional to avoid TS errors when not passed
+};
+
 export default function BlogDetailsRelatedPosts({
   currentSlug,
-}: {
-  currentSlug: string;
-}) {
+}: BlogDetailsRelatedPostsProps) {
   const [related, setRelated] = useState<BlogCard[]>([]);
 
   useEffect(() => {
+    // if we don't know the current slug, don't try to load related posts
+    if (!currentSlug) return;
+
     const fetchRelated = async () => {
       const { data, error } = await supabase
         .from("blogs")
@@ -34,9 +39,10 @@ export default function BlogDetailsRelatedPosts({
       }
     };
 
-    if (currentSlug) fetchRelated();
+    fetchRelated();
   }, [currentSlug]);
 
+  // nothing to show
   if (!related.length) return null;
 
   return (
@@ -49,6 +55,7 @@ export default function BlogDetailsRelatedPosts({
             </div>
           </div>
         </div>
+
         <div className="row">
           {related.map((item) => {
             const adaptedItem = {
