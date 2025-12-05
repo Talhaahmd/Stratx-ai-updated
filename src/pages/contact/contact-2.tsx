@@ -79,7 +79,6 @@ const ContactTwoMain = () => {
                           <h4 className="cn-contactform-2-title">
                             Send a Message
                           </h4>
-                          <ContactForm btnCls="white-bg" />
                         </div>
                       </div>
                     </div>
