@@ -2,20 +2,25 @@
 const nextConfig = {
   images: {
     remotePatterns: [
+      // Pexels
       {
         protocol: "https",
         hostname: "images.pexels.com",
         pathname: "/**",
       },
+
+      // Cloudinary
       {
         protocol: "https",
         hostname: "res.cloudinary.com",
         pathname: "/**",
       },
+
+      // Supabase Storage
       {
         protocol: "https",
-        hostname: process.env.NEXT_PUBLIC_SUPABASE_URL?.replace("https://", ""),
-        pathname: "/**",
+        hostname: "wlgkteemtcmpxzpkifhg.supabase.co",
+        pathname: "/storage/**",
       },
     ],
   },
