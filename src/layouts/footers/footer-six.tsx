@@ -124,7 +124,6 @@ export default function FooterSix() {
               </div>
               <div className="col-xl-8 col-lg-7 col-md-6">
                 <div className="tp-copyright-2-payment text-center text-md-end">
-                  <Image src={payment} alt="payment" />
                 </div>
               </div>
             </div>
