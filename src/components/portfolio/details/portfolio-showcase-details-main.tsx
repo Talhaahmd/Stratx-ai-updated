@@ -57,6 +57,12 @@ export default function PortfolioDetailsShowcaseMain({
 
   useEffect(() => {
     const fetchProject = async () => {
+      if (!supabase) {
+        setProject(null);
+        setLoading(false);
+        return;
+      }
+
       const { data, error } = await supabase
         .from("portfolio_slides")
         .select(

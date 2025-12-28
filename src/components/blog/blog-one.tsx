@@ -22,6 +22,10 @@ export default function BlogOne() {
   const router = useRouter();
 
   const fetchBlogs = async () => {
+    if (!supabase) {
+      setLoading(false);
+      return;
+    }
     setLoading(true);
 
     const { data, error } = await supabase
@@ -37,6 +41,8 @@ export default function BlogOne() {
   };
 
   useEffect(() => {
+    if (!supabase) return;
+
     fetchBlogs();
 
     const channel = supabase

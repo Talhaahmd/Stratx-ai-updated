@@ -25,6 +25,12 @@ export default function ContactForm() {
 
     setLoading(true);
 
+    if (!supabase) {
+      setErrorMsg("Contact service is currently unavailable. Please try again later.");
+      setLoading(false);
+      return;
+    }
+
     const { error } = await supabase.from("contact_messages").insert([
       {
         name,

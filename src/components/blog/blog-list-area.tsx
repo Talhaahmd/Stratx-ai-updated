@@ -22,6 +22,10 @@ export default function BlogListArea() {
 
   useEffect(() => {
     const fetchBlogs = async () => {
+      if (!supabase) {
+        setLoading(false);
+        return;
+      }
       const { data, error } = await supabase
         .from("blogs")
         .select("*")
