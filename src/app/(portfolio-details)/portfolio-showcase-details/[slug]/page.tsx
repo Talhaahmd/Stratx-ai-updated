@@ -59,6 +59,12 @@ export default function PortfolioDetailsShowcaseMain() {
     if (!slug) return; // wait until we actually have a slug
 
     const fetchProject = async () => {
+      if (!supabase) {
+        console.warn("Supabase client is not initialized.");
+        setProject(null);
+        setLoading(false);
+        return;
+      }
       const { data, error } = await supabase
         .from("portfolio_slides")
         .select(
