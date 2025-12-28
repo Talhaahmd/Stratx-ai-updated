@@ -51,10 +51,9 @@ export default function AboutUsArea() {
                 Hi!
               </span>
               <p className="tp-dropcap tp_fade_bottom">
-                We are a Marketing studio that specializes in providing
-                high-quality design and branding solutions to businesses and
-                individuals. Our team is composed of talented designers,
-                developers, and marketers.!
+                We are an AI-powered marketing studio specializing in intelligent
+                marketing, content creation, and brand growth solutions for
+                businesses and individuals.
               </p>
             </div>
           </div>
@@ -80,21 +79,24 @@ export default function AboutUsArea() {
                   <div className="col-xl-6 col-lg-6 col-md-6 mb-40">
                     <div className="ab-about-category-list category-space-1 tp_fade_bottom">
                       <ul>
-                        <li>Art direction</li>
-                        <li>Branding</li>
-                        <li>Content Production</li>
-                        <li>User Interface Design</li>
-                        <li>Animation</li>
+                        <li>Website Development</li>
+                        <li>Custom Software Development</li>
+                        <li>AI Marketing</li>
+                        <li>Social Media Management</li>
+                        <li>Lead Generation</li>
+                        <li>Performance Marketing</li>
                       </ul>
                     </div>
                   </div>
                   <div className="col-xl-6 col-lg-6 col-md-6 mb-40">
                     <div className="ab-about-category-list category-space-2 tp_fade_bottom">
                       <ul>
-                        <li>Brand Identity</li>
-                        <li>User Interface</li>
-                        <li>User Experience</li>
-                        <li>Responsive Design</li>
+                        <li>Content Creation</li>
+                        <li>Brand Strategy</li>
+                        <li>UI/UX Design</li>
+                        <li>Conversion-Focused Design</li>
+                        <li>CRM Integration</li>
+                        <li>Analytics & Optimization</li>
                       </ul>
                     </div>
                   </div>

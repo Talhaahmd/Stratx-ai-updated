@@ -3,12 +3,12 @@ import { Metadata } from "next";
 import ContactMain from "@/pages/contact/contact";
 
 export const metadata: Metadata = {
-  title: "Liko - Contact page",
+  title: "StratX - Contact page",
 };
 
 const ContactPage = () => {
   return (
-    <ContactMain/>
+    <ContactMain />
   );
 };
 

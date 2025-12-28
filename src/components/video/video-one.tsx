@@ -5,15 +5,14 @@ const VideOne = () => {
   return (
     <div className="tp-hero-bottom-img-wrap">
       <div className="tp-hero-bottom-img">
-        <iframe
-          src="https://player.cloudinary.com/embed/?cloud_name=dt93sahp2&public_id=ai_video_short_lkasrf&profile=cld-default&autoplay=true&loop=true&muted=true"
-          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-          allowFullScreen
-          frameBorder="0"
-          width="100%"
-          height="100%"
-          style={{ borderRadius: '0px', overflow: 'hidden' }}
-        ></iframe>
+        <video
+          src="https://res.cloudinary.com/dt93sahp2/video/upload/ai_video_short_lkasrf.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        ></video>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube } from "../svg";
+import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube, Linkdin } from "../svg";
 
 // images
 import BrandLogoText from "@/components/common/brand-logo-text";
@@ -41,8 +41,8 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
           </div>
           <div className="tp-offcanvas-main">
             <div className="tp-offcanvas-content">
-              <h3 className="tp-offcanvas-title">Hello There!</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+              <h3 className="tp-offcanvas-title">About StratX</h3>
+              <p>We are an AI-powered marketing studio specializing in intelligent marketing, content creation, and brand growth solutions.</p>
             </div>
             <div className="tp-main-menu-mobile d-xl-none">
               <MobileMenus />
@@ -65,13 +65,10 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
 
               <ul>
                 <li>
-                  <Link href="tel:1245654">+ 4 20 7700 1007</Link>
+                  <Link href="mailto:info@stratx.io">info@stratx.io</Link>
                 </li>
                 <li>
-                  <Link href="mailto:hello@diego.com">hello@diego.com</Link>
-                </li>
-                <li>
-                  <Link href="#">Avenue de Roma 158b, Lisboa</Link>
+                  <Link href="#">GTA, Canada. <br /> Lahore, Pakistan</Link>
                 </li>
               </ul>
             </div>
@@ -79,16 +76,10 @@ export default function MobileOffcanvas({ openOffcanvas, setOpenOffcanvas }: IPr
               <h3 className="tp-offcanvas-title sm">Follow Us</h3>
               <ul>
                 <li>
-                  <Link href="#"><InstagramTwo /></Link>
+                  <Link href="https://www.instagram.com/klarus.ai/" target="_blank"><InstagramTwo /></Link>
                 </li>
                 <li>
-                  <Link href="#"><Dribble /></Link>
-                </li>
-                <li>
-                  <Link href="#"> <Behance /></Link>
-                </li>
-                <li>
-                  <Link href="#"><Youtube /></Link>
+                  <Link href="https://www.linkedin.com/company/klarus-ai/" target="_blank"><Linkdin /></Link>
                 </li>
               </ul>
             </div>

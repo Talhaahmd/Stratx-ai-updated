@@ -1,16 +1,13 @@
 import React from "react";
 import Image from "next/image";
 // images
-import location_1 from "@/assets/img/inner-contact/contact/info-1.jpg";
-import location_2 from "@/assets/img/inner-contact/contact/info-2.jpg";
-import location_3 from "@/assets/img/inner-contact/contact/info-3.jpg";
-import Link from "next/link";
+// images
+import Link from 'next/link';
 
 // data
 const location_data = [
   {
     id: 1,
-    img: location_1,
     country: "Toronto, Canada",
     time: "12:00 pm GMT+2",
     location_title: "GTA",
@@ -20,7 +17,6 @@ const location_data = [
   },
   {
     id: 2,
-    img: location_2,
     country: "Lahore, Pakistan",
     time: "11:00 pm GMT+2",
     location_title: "Lahore",
@@ -28,7 +24,6 @@ const location_data = [
     phone: "+92 314 9505 428",
     email: "info@stratx.io",
   },
- 
 ];
 
 const ContactLocation = () => {
@@ -41,9 +36,7 @@ const ContactLocation = () => {
               <div className="row">
                 <div className="col-xl-7">
                   <div className="cn-contact-left d-flex flex-wrap align-items-center">
-                    <div className="cn-contact-info-thumb">
-                      <Image src={item.img} alt="image" style={{ height: "auto" }} />
-                    </div>
+
                     <div className="cn-contact-left-info">
                       <h4 className="cn-contact-left-title">{item.country}</h4>
                       <span>

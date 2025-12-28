@@ -10,7 +10,7 @@ type IProps = {
   setOpenOffcanvas: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function MobileOffcanvasTwo({openOffcanvas,setOpenOffcanvas}:IProps) {
+export default function MobileOffcanvasTwo({ openOffcanvas, setOpenOffcanvas }: IProps) {
   return (
     <div className={`tp-offcanvas-2-area p-relative ${openOffcanvas ? "opened" : ""}`}>
       <div className="tp-offcanvas-2-bg is-left left-box"></div>
@@ -40,7 +40,7 @@ export default function MobileOffcanvasTwo({openOffcanvas,setOpenOffcanvas}:IPro
             </div>
           </div>
           <div className="tp-main-menu-mobile menu-hover-active counter-row">
-            <MobileMenusTwo/>
+            <MobileMenusTwo />
           </div>
         </div>
         <div className="tp-offcanvas-2-right right-box d-none d-md-block p-relative">
@@ -59,24 +59,19 @@ export default function MobileOffcanvasTwo({openOffcanvas,setOpenOffcanvas}:IPro
           </div>
           <div className="tp-offcanvas-2-right-inner d-flex flex-column justify-content-between h-100">
             <div className="tpoffcanvas__right-info">
-              <div className="tpoffcanvas__tel">
-                <Link href="tel:61404093954">+61404093 954</Link>
-              </div>
               <div className="tpoffcanvas__mail">
-                <Link href="mailto:hellocontact@diego.com">
-                  hello contact@diego.com
+                <Link href="mailto:info@stratx.io">
+                  info@stratx.io
                 </Link>
               </div>
               <div className="tpoffcanvas__text">
-                <p>If in doubt. reach out.</p>
+                <p>GTA, Canada. <br /> Lahore, Pakistan</p>
               </div>
             </div>
             <div className="tpoffcanvas__social-link">
               <ul>
-                <li><Link href="#">Dribbble</Link></li>
-                <li><Link href="#">Instagram</Link></li>
-                <li><Link href="#">Linkedin</Link></li>
-                <li><Link href="#">Behance</Link></li>
+                <li><Link href="https://www.instagram.com/klarus.ai/" target="_blank">Instagram</Link></li>
+                <li><Link href="https://www.linkedin.com/company/klarus-ai/" target="_blank">Linkedin</Link></li>
               </ul>
             </div>
           </div>
